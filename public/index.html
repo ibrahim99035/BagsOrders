@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Order Calculator</h1>
+
+    <div id="authenticated-content" style="display: none;">
+        <form id="order-form">
+            <!-- Input fields for order calculation -->
+            <label for="width">Width:</label>
+            <input type="number" id="width" name="width" required>
+            <br>
+
+            <label for="height">Height:</label>
+            <input type="number" id="height" name="height" required>
+            <br>
+
+            <label for="bottom_space">Bottom Space:</label>
+            <input type="number" id="bottom_space" name="bottom_space" required>
+            <br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <br>
+
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="type1">Type 1</option>
+                <option value="type2">Type 2</option>
+                <option value="type3">Type 3</option>
+                <option value="type4">Type 4</option>
+                <option value="type5">Type 5</option>
+            </select>
+            <br>
+
+            <label for="printing_method">Printing Method:</label>
+            <select id="printing_method" name="printing_method">
+                <option value="none">None</option>
+                <option value="method1">Method 1</option>
+                <option value="method2">Method 2</option>
+                <option value="method3">Method 3</option>
+                <option value="method4">Method 4</option>
+                <option value="method5">Method 5</option>
+            </select>
+            <br>
+
+            <label for="color_count">Color Count:</label>
+            <input type="number" id="color_count" name="color_count" min="0" required>
+            <br>
+
+            <label for="hand_attachment">Hand Attachment:</label>
+            <select id="hand_attachment" name="hand_attachment">
+                <option value="attachment1">Attachment 1</option>
+                <option value="attachment2">Attachment 2</option>
+                <option value="attachment3">Attachment 3</option>
+            </select>
+            <br>
+
+            <label for="store">Store Order:</label>
+            <input type="checkbox" id="store" name="store" checked>
+            <br>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="error"></div>
+
+        <button id="download-excel" class="btn">Download Excel (<span id="current-month"></span>)</button>
+
+    </div>
+
+    <div id="auth-form">
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
